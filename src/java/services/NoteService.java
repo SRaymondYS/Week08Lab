@@ -56,7 +56,7 @@ public class NoteService
         return r;
     }
     
-    public int insert(String contents, String title) throws Exception
+    public int insert(String title, String contents) throws Exception
     {
         NoteDB ndb = new NoteDB();
         Date d = new Date();
@@ -65,7 +65,7 @@ public class NoteService
         
         if(r == 0)
         {
-            throw new NotesBDException("Error - Delete operation unsuccessful.");
+            throw new NotesBDException("Error - Insert operation unsuccessful.");
         }
         
         return r;
